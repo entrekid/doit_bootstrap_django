@@ -29,15 +29,21 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+PROJECT_APPS = [
+ "blog.apps.BlogConfig",
+    "single_pages.apps.SinglePagesConfig",
+]
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
+DJANGO_APPS = [
+'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
+INSTALLED_APPS = PROJECT_APPS + DJANGO_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -105,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
